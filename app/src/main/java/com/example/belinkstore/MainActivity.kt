@@ -10,6 +10,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.capstone.belinkStore.getStringArraySaved
+import com.capstone.belinkStore.setStringArrayPref
 import com.example.belinkstore.AlarmAdapter
 import com.example.belinkstore.Message
 //import com.example.belinkstore.MyHostApduService
@@ -40,6 +42,7 @@ class MainActivity : AppCompatActivity(), CreateNdefMessageCallback {
         val adapter = AlarmAdapter(this, DataList)
         binding.recyclerView.adapter=adapter
 
+        val storeId = getStringArraySaved(this@MainActivity,"storeId")
 
 
 //        nfcAdapter = NfcAdapter.getDefaultAdapter(this)

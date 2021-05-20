@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.capstone.belinkStore.setStringArrayPref
 import com.example.belinkstore.R
 import com.example.belinkstore.RetrofitClient
 import com.example.belinkstore.RetrofitService
@@ -76,6 +77,7 @@ class LoginActivity : AppCompatActivity(){
                 Log.d("Id", storeId)
                 Log.d("Address", storeAddress)
                 Log.d("Name", response.message())
+                setStringArrayPref(this@LoginActivity,"storeId",loginResponse!!)
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
                 startActivity(intent)
                 this@LoginActivity.finish()

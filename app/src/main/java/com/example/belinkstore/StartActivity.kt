@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.belinkstore.LoginActivity
 import com.example.belinkstore.MainActivity
+import org.apache.http.params.HttpConnectionParams.setSoTimeout
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
