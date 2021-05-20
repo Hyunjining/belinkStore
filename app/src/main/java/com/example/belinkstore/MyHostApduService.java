@@ -24,7 +24,7 @@ public class MyHostApduService extends HostApduService {
     private static final byte[] UNKNOWN_CMD_SW = HexStringToByteArray("0000");
     private static final byte[] SELECT_APDU = BuildSelectApdu(SAMPLE_LOYALTY_CARD_AID);
     private static final byte[] GET_DATA_APDU = BuildGetDataApdu();
-    private String account = "2020-05-11 SENDING A STRING WITH NFC FROM F700";
+    public static String account = "2020-05-11 SENDING A STRING WITH NFC FROM F700";
 
     public String getAccount(){
         return account;

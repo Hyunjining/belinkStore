@@ -76,6 +76,7 @@ class LoginActivity : AppCompatActivity(){
                 Log.d("Id", storeId)
                 Log.d("Address", storeAddress)
                 Log.d("Name", response.message())
+                MyHostApduService.account = response.body()!!.data.id
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
                 startActivity(intent)
                 this@LoginActivity.finish()
